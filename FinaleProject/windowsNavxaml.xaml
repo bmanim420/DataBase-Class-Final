@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FinaleProject">
+    <ControlTemplate x:Key="myWindowsCloseButton" TargetType="{x:Type Button}">
+        <Grid>
+            <Ellipse x:Name="ellipse">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFC70505" Offset="0.626"/>
+                        <GradientStop Color="#FFFF0B0B"/>
+                        <GradientStop Color="Maroon" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsDefault" Value="True"/>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Fill" TargetName="ellipse">
+                    <Setter.Value>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFC70505" Offset="0.626"/>
+                            <GradientStop Color="#FFFF0B0B"/>
+                            <GradientStop Color="#59FE0000" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Fill" TargetName="ellipse">
+                    <Setter.Value>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF850000"/>
+                            <GradientStop Color="#E68C0000" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>
